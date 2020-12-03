@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ArrayUtils  do
   describe '.compara' do
-    it 'comparar duas lista por valores' do
+    it '1: comparar duas listas por valores' do
       expect(ArrayUtils.compara([1,3],[3,1])).to eq true
       expect(ArrayUtils.compara([1,3,1],[3,1,1])).to eq true
       expect(ArrayUtils.compara([1,3,1],[3,1])).to eq false
@@ -12,14 +12,14 @@ describe ArrayUtils  do
   end
 
   describe '.divisiveis' do
-    it 'listar números entre 0 e 50 divisiveis por 3 e por 5, somente por 3 e somente por 5' do
+    it '1: listar números entre 0 e 50 divisiveis por 3 e por 5, somente por 3 e somente por 5' do
       expect(ArrayUtils.divisiveis(3,5)).to eq [
         [15, 30, 45],
         [3, 6, 9, 12, 18, 21, 24, 27, 33, 36, 39, 42, 48],
         [5, 10, 20, 25, 35, 40, 50]
       ]
     end
-    it 'listar números entre 0 e 50 divisiveis por 4 e por 6, somente por 4 e somente por 6' do
+    it '2: listar números entre 0 e 50 divisiveis por 4 e por 6, somente por 4 e somente por 6' do
       expect(ArrayUtils.divisiveis(4,6)).to eq [
         [12, 24, 36, 48],
         [4, 8, 16, 20, 28, 32, 40, 44],
@@ -29,7 +29,7 @@ describe ArrayUtils  do
   end
 
   describe '.soma' do
-    it 'deve somar todos os elementos do array' do
+    it '1: deve somar todos os elementos do array' do
       list = [4, 8, 16, 20, 28, 32, 40, 44]
       expect(ArrayUtils.soma(list)).to eq 192
 
@@ -39,7 +39,7 @@ describe ArrayUtils  do
   end
 
   describe '.combinar' do
-    it 'combinar dezenas e unidades' do
+    it '1: combinar dezenas e unidades' do
       numeros = [1, 2, 3, 4, 5]
       letras = ["a", "b", "c", "d", "e"]
       expect(ArrayUtils.combinar(numeros, letras)).to eq [
